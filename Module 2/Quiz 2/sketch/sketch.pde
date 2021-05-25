@@ -9,11 +9,18 @@ void setup()
   
 }
 
+// Instantiate the walkers
 Walker walker = new Walker();
+Walker biasedWalker = new Walker();
 
 void draw()
 {
+  // Make the walkers walk
   walker.randomWalk();
+  biasedWalker.randomWalkBiased();
+  
+  // Display the walker
   walker.render();
+  biasedWalker.render();
   
 }
