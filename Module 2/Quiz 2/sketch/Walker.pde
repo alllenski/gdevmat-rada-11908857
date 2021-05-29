@@ -75,7 +75,7 @@ class Walker
     40% = Right
     20% = Left
     */
-    int rng = int(random(10));
+    float rng = random(10);
     if (rng < 2)
     {
       y -= stepDistance;

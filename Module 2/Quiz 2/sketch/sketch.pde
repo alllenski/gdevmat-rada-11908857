@@ -19,7 +19,7 @@ void draw()
   walker.randomWalk();
   biasedWalker.randomWalkBiased();
   
-  // Display the walker
+  // Display the walkers
   walker.render();
   biasedWalker.render();
   
