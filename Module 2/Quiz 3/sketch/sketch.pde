@@ -23,7 +23,7 @@ void draw()
   int standardDeviation = 100;  
   int mean = 0;
   float x = randomGaussian() * standardDeviation + mean;
-  float y = random(-width / 2, width / 2);
+  float y = random(-width / 2, height / 2);
   
   // Setup circle size
   standardDeviation = 25;
