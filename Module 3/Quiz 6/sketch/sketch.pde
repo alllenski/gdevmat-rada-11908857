@@ -19,21 +19,27 @@ PVector mousePosition()
 
 void draw()
 {
-  background(255); 
-  
-  strokeWeight(6);
+  background(128); 
   
   PVector mouse = mousePosition();
   
-  // Draw blade
+  // Draw outer glow
   stroke(255, 0, 0);
+  strokeWeight(9);
   line(0, 0, mouse.x, mouse.y);
   line(0, 0, -mouse.x, -mouse.y);
   println(mouse.mag());
   
+  // Draw inner glow
+  stroke(255);
+  strokeWeight(3);
+  line(0, 0, mouse.x, mouse.y);
+  line(0, 0, -mouse.x, -mouse.y);
+  
   // Draw handle
   mouse.setMag(30);
-  stroke(128);
+  stroke(0);
+  strokeWeight(8);
   line(-mouse.x, -mouse.y, mouse.x, mouse.y);
   
 }
