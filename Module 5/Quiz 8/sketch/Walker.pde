@@ -62,15 +62,25 @@ class Walker
   // Check and bounce
   void checkAndBounce()
   {
-    if ((this.position.x + this.scale / 2 > Window.right) ||
-        (this.position.x - this.scale / 2 < Window.left))
+    if (this.position.x + this.scale / 2 > Window.right)
     {
       this.velocity.x *= -1;
+      this.position.x += this.velocity.x;
     }
-    if ((this.position.y + this.scale / 2 > Window.top) ||
-        (this.position.y - this.scale / 2 < Window.bottom))
+    else if (this.position.x - this.scale / 2 < Window.left)
+    {
+      this.velocity.x *= -1;
+      this.position.x += this.velocity.x;
+    }
+    if (this.position.y + this.scale / 2 > Window.top)
     {
       this.velocity.y *= -1; 
+      this.position.y += this.velocity.y;
+    }
+    else if (this.position.y - this.scale / 2 < Window.bottom)
+    {
+      this.velocity.y *= -1; 
+      this.position.y += this.velocity.y;
     }
     
   }
