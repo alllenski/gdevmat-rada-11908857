@@ -23,7 +23,7 @@ void draw()
   // Walk the walkers
   for (Walker walker: walkers)
   {
-    PVector acceleration = new PVector(0.02 * walker.mass, 0);
+    PVector acceleration = new PVector(0.2, 0);
     walker.update();
     walker.render();
     walker.applyForce(acceleration);
