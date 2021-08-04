@@ -39,14 +39,14 @@ class Walker
   void update()
   {
     float normal = 1;
-    float frictionMagnitude = this.mew * normal;
+    float frictionMagnitude = this.mew * this.normal;
     PVector friction = this.velocity.copy();
     
     friction.mult(-1);
     friction.normalize();
     friction.mult(frictionMagnitude);
     this.applyForce(friction);
-    
+
     // Increase velocity by accelerating
     this.velocity.add(acceleration);
     
